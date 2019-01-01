@@ -24,7 +24,7 @@ INSERT INTO public.auth_user (
    NOW()
 );
 
-DELETE FROM public.skills_skill
+DELETE FROM public.skills_skill;
 
 INSERT INTO public.skills_skill (id, name, proficiency, icon_class, date_created, date_deleted) VALUES (uuid_generate_v4(), 'NPM', 100, 'devicon-npm-original-wordmark', NOW(), '');
 INSERT INTO public.skills_skill (id, name, proficiency, icon_class, date_created, date_deleted) VALUES (uuid_generate_v4(), 'Iconic', 5, 'devicon-ionic-original', NOW(), '');
