@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+@import "variables";
+
+.component--projects-container {
+  position: fixed;
+  height: 100%;
+  z-index: 200;
+  top: 0;
+}
+
+.component--project {
+  padding: 20px;
+  width: 100%;
+  height: 325px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -153px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border: 10px solid #fff;
+  transition: all .2s linear;
+  filter: blur(3px);
+  box-shadow: 0 0 10px rgba(#000, .2);
+
+  &.active {
+    z-index: 101;
+    filter: blur(0);
+    box-shadow: 0 0 50px rgba(#000, .8);
+
+    .component--project-technologies {
+      transition: all .8s linear;
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+}
+
+.component--project-title {
+  margin: 0;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  border-bottom-left-radius: 10px;
+  padding: 5px;
+}
+
+.component--technology {
+  font-size: 1.5rem;
+  margin: 5px;
+  display: inline-block;
+}
+
+.component--project-technologies {
+  background: #f0f0f0;
+  padding: 10px;
+  border: 10px solid #fff;
+  border-radius: 10px;
+  margin: -80px 0 0 0;
+  position: absolute;
+  top: 50%;
+  right: -80px;
+  width: 215px;
+  transition-delay: .2s;
+  transition: none;
+  opacity: 0;
+  filter: blur(20px);
+  box-shadow: 0 0 20px rgba(#000, .05);
+}
+
+.component--project-actions {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+
+  .component--action-button {
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: 5px;
+    }
+  }
+}
+
+.component--action-button {
+  transition: .2s all linear;
+  background: #fff;
+  padding: 7px 10px;
+  color: #333;
+
+  &::before {
+    vertical-align: text-top;
+    margin-right: 3px;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .component--project-technologies {
+    width: 120px;
+    right: -30px;
+  }
+
+  .component--technology {
+    font-size: 1rem;
+  }
+
+  .component--project-actions {
+    .component--action-button {
+      font-size: .7rem;
+      padding: 7px 8px;
+    }
+  }
+}

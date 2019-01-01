@@ -1,0 +1,28 @@
+version: '3'
+services:
+  db:
+    build: "./db"
+    volumes:
+    - "./data:/var/lib/postgresql/data"
+    ports:
+    - "5001:5432"
+    environment:
+    - POSTGRES_USER=jna
+    - POSTGRES_PASSWORD=jna
+    - POSTGRES_DB=jna
+    restart: "always"
+  api:
+    build: "./api"
+    ports:
+    - "9001:9000"
+    restart: "always"
+    depends_on: 
+      - db
+  ui:
+    build: "./ui"
+    ports:
+    - "8001:8000"
+    restart: "always"
+    environment:
+    - VIRTUAL_HOST=jonathanadamski.com,www.jonathanadamski.com
+    - VIRTUAL_PORT=8001

@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+@import "variables";
+
+.component--seeder {
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  z-index: 300;
+
+  .component--seed-value {
+    width: 5rem;
+  }
+
+  .component--action-button {
+    margin-left: 5px;
+  }
+}
+
+.component--action-input {
+  &::before {
+    position: absolute;
+    top: 50%;
+    margin-top: -11px;
+    left: 8px;
+    z-index: 100;
+    color: #fff;
+    background: #12ad3d;
+    padding: 3px;
+    border-radius: 3px;
+  }
+
+  position: relative;
+  display: inline-block;
+  height: 33px;
+  box-shadow: inset 1px 1px 3px rgba(#000, .5);
+
+  input {
+    padding-left: 35px;
+    max-width: 135px
+  }
+}
+
+
+.component--seed-value,
+.component--set-seed,
+.component--random-seed {
+  background: #fff;
+  color: #888;
+}
+
+.component--set-seed,
+.component--random-seed {
+  color: #fff;
+  margin-left: 5px;
+
+  &::before {
+    margin-right: 5px;
+    vertical-align: text-top;
+    line-height: .9rem;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    text-shadow: 1px 1px 10px #000;
+  }
+}
+
+.component--seeder {
+  .jna-icon-leaf:before {
+    vertical-align: text-top;
+  }
+}
+
+.component--random-seed {
+  background: #46A1A7;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: darken(#46A1A7, 7);
+  }
+}
+
+.component--set-seed {
+  background: #d56f26;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: darken(#d56f26, 7);
+  }
+}
+
+.component--error-message {
+  background: rgba(#f00, .5);
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+}

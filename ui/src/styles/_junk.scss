@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@import "variables";
+
+.component--junk-container {
+  height: 100%;
+  width: 90%;
+  margin-left: 10%;
+  position: relative;
+  z-index: 100;
+}
+
+.component--junk {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: -500px 0 0 -500px;
+}

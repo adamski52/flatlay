@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+$screen-xs: 320px;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 1200px;
+
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+$theme-font-main: "comfortaa";
+$theme-font-icons: "jna-icons";
+
+$theme-global-primary: #fff;
+$theme-global-bad: #dd8689;
+$theme-global-perfect: $theme-global-primary;
+$theme-global-transition: all .1s linear;
+$theme-global-transition-slow: all .5s linear;
+$theme-global-sizing-large: 30px;
+$theme-global-sizing-small: 5px;
+
+$theme-skills-primary: #57342f;
+$theme-skills-secondary: #d5bcbb;
+$theme-skills-highlight: $theme-global-primary;
+
+$theme-gauge-perfect-glow: $theme-global-primary;
+$theme-gauge-size: 101px;
+$theme-gauge-primary: $theme-global-primary;
+$theme-gauge-secondary: $theme-skills-primary;
+
+$theme-technology-primary: $theme-skills-primary;
+$theme-technology-secondary: $theme-skills-secondary;
+
+$theme-projects-footer-height: 1.7rem;
+
+$theme-view-code-primary: #792685;
+$theme-view-code-secondary: $theme-global-primary;
+
+$theme-view-live-primary: #d02f2c;
+$theme-view-live-secondary: $theme-global-primary;
+
+@mixin theme($name, $offColor, $offBackground, $offIconColor, $hoverColor, $hoverBackground, $hoverIconColor) {
+  .#{$name} {
+    &::before,
+    ::before {
+      color: $offIconColor;
+    }
+
+    background: $offBackground;
+    color: $offColor;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: $hoverBackground;
+      color: $hoverColor;
+
+      &::before,
+      ::before {
+        color: $hoverIconColor;
+      }
+    }
+  }
+}
+
+@include theme("theme--primary-reverse", #fff, #0084b7, #fff, #0084b7, #fff, #0084b7);
+@include theme("theme--secondary-reverse", #fff, #ee7e00, #fff, #ee7e00, #fff, #ee7e00);
+@media (min-width: $screen-sm-min) {
+  @include theme("theme--accent", #333, #fff, #c7099d, #fff, #c7099d, #fff);
+  @include theme("theme--primary", #333, #fff, #0084b7, #fff, #0084b7, #fff);
+  @include theme("theme--secondary", #333, #fff, #ee7e00, #fff, #ee7e00, #fff);
+}
+@media (max-width: $screen-xs-max) {
+  @include theme("theme--accent", #fff, #c7099d, #fff, #c7099d, #fff, #c7099d);
+  @include theme("theme--primary", #fff, #0084b7, #fff, #0084b7, #fff, #0084b7);
+  @include theme("theme--secondary", #fff, #ee7e00, #fff, #ee7e00, #fff, #ee7e00);
+}

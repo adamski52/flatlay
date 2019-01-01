@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+[data-icon]:before {
+  font-family: "jna-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="jna-icon-"]:before,
+[class*=" jna-icon-"]:before {
+  font-family: "jna-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.jna-icon-steam:before {
+  content: "\61";
+}
+.jna-icon-stack-overflow:before {
+  content: "\62";
+}
+.jna-icon-instagram:before {
+  content: "\63";
+}
+.jna-icon-map-marker:before {
+  content: "\64";
+}
+.jna-icon-phone:before {
+  content: "\65";
+}
+.jna-icon-envelope:before {
+  content: "\66";
+}
+.jna-icon-github:before {
+  content: "\67";
+}
+.jna-icon-twitter:before {
+  content: "\68";
+}
+.jna-icon-linkedin:before {
+  content: "\69";
+}
+.jna-icon-paint-brush:before {
+  content: "\6b";
+}
+.jna-icon-code-fork:before {
+  content: "\6c";
+}
+.jna-icon-code:before {
+  content: "\6d";
+}
+.jna-icon-angle-double-left:before {
+  content: "\6e";
+}
+.jna-icon-angle-double-right:before {
+  content: "\6f";
+}
+.jna-icon-angle-double-up:before {
+  content: "\70";
+}
+.jna-icon-angle-double-down:before {
+  content: "\71";
+}
+.jna-icon-heartbeat:before {
+  content: "\72";
+}
+.jna-icon-heart:before {
+  content: "\73";
+}
+.jna-icon-pencil:before {
+  content: "\47";
+}
+.jna-icon-flask:before {
+  content: "\58";
+}
+.jna-icon-child:before {
+  content: "\33";
+}
+.jna-icon-clock-o:before {
+  content: "\34";
+}
+.jna-icon-building:before {
+  content: "\75";
+}
+.jna-icon-building-o:before {
+  content: "\76";
+}
+.jna-icon-lightbulb-o:before {
+  content: "\6a";
+}
+.jna-icon-vcard:before {
+  content: "\7a";
+}
+.jna-icon-envelope-1:before {
+  content: "\74";
+}
+.jna-icon-leaf:before {
+  content: "\77";
+}
+.jna-icon-undo:before {
+  content: "\78";
+}
+.jna-icon-retweet:before {
+  content: "\79";
+}
+.jna-icon-random:before {
+  content: "\41";
+}
