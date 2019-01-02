@@ -24,3 +24,7 @@ services:
     environment:
     - VIRTUAL_HOST=jonathanadamski.com,www.jonathanadamski.com
     - VIRTUAL_PORT=8001
+networks:
+  default:
+    external:
+      name: ubuntu_default
