@@ -21,10 +21,3 @@ services:
     ports:
     - "8000:8000"
     restart: "always"
-    environment:
-    - VIRTUAL_HOST=jonathanadamski.com,www.jonathanadamski.com
-    - VIRTUAL_PORT=8000
-networks:
-  default:
-    external:
-      name: ubuntu_default
